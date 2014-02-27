@@ -1,0 +1,21 @@
+%h2
+  Results for your account
+%fieldset
+  %table
+    %thead
+      %tr
+        - @data[:visit_count].data.column_headers.each do |elem|
+          %th{width: "200"}
+            = elem.name.humanize
+
+    %tbody
+      - @data[:visit_count].data.rows.each do |elem|
+        %tr
+          %td 
+            = elem[0]
+          %td 
+            = elem[1]
+          %td 
+            = elem[2]
+        
+    

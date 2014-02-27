@@ -1,0 +1,32 @@
+%nav.top-bar{"data-topbar" => ""}
+  %ul.title-area
+    %li.name
+      %h1
+        = link_to root_url do 
+          = image_tag 'Google-Analytics-icon.png'
+          = content_tag(:i,' Google Analytics Reader',class: 'fa fa-co')
+    %li.toggle-topbar.menu-icon
+      %a{href: "#"} Menu
+  %section.top-bar-section
+    / Right Nav Section
+    %ul.right
+      %li.active
+        = link_to 'https://github.com/ankit8898',target: '_blank' do 
+          = content_tag(:i,nil,class: 'fa fa-github-square')
+      %li.active
+        = link_to 'https://twitter.com/ankit8898',target: '_blank' do 
+          = content_tag(:i,nil,class: 'fa fa-twitter')
+      %li.active
+        = link_to 'https://linkedin.com/pub/ankit-gupta/25/205/254/', target: '_blank' do 
+          = content_tag(:i,nil,class: 'fa fa-linkedin-square')
+      %li.active
+        = link_to 'http://stackoverflow.com/users/662425/ankitg', target: '_blank' do 
+          = content_tag(:i,nil,class: 'fa fa-stack-overflow')
+      %li.active
+        = link_to 'http://instagram.com/ag_instagraphy', target: '_blank' do 
+          = content_tag(:i,nil,class: 'fa fa-instagram')  
+      %li.has-dropdown
+        = link_to "Welcome, User"
+        %ul.dropdown
+          %li
+            = link_to 'Sign Out','#'
